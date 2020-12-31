@@ -1,0 +1,45 @@
+PROCEDURE dot_product (v1 , v2 , ps)
+VAR
+
+BEGIN
+  ps = v1 * v2
+END
+
+PROCEDURE orthogonal (vectorarray)
+VAR
+   i integer
+BEGIN
+   FOR i FROM 0 TO 100 STEP 1  DO
+    IF (dot_product(vectorarray[i][0],vectorarray[i][1])==0) THEN
+      write(vectorarray[i])
+    END_IF
+END_FOR
+END
+
+ALGORITHM vector
+VAR
+    v1 , v2 , ps INTEGER 
+     vector : ARRAY_OF INTEGER[2]
+    vectorarray : ARRAY_OF vector[0..100]
+
+    x vector
+
+BEGIN
+     REPEAT
+     read(v1,v2)
+    UNTIL (v1>0 and v2>0)
+    dot_product(v1,v2,ps)
+
+    FOR i FROM 0 TO 100 STEP 1  DO
+        FOR j FROM 0 TO 2 STEP 1  DO
+            read(x[j])
+        END_FOR
+        vectorarray[i]=x
+    END_FOR
+
+
+    orthogonal(vectorarray)
+
+
+
+END

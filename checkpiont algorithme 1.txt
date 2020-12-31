@@ -1,0 +1,35 @@
+algorithme
+begin
+variable s 
+s := 0
+while (ch[s]!=".") faire
+s=s+1
+end while
+read s
+end
+----------------------
+algorithme
+begin
+variable x , y
+x := 0
+y := 0
+while (ch[x]!=".") faire
+if (ch[x]=" "){
+y=y+1
+}
+x=x+1
+end while
+read y+1
+end
+------------------------
+algorithme
+begin
+variable a , b
+a := 0
+b := 0
+while (ch[a]!=".") faire
+if (ch[a]in ["a", "e", "u", "i", "o"]){
+b=b+1
+}
+end while
+end

@@ -1,0 +1,17 @@
+ALGORITHM serching
+PROCEDURE ( x : INTEGER , arr : integer)
+VAR
+    i : integer
+    j : integer
+    aux : integer
+BEGIN
+    FOR i FROM 1 TO x STEP 1 DO
+    aux = tab[i]
+    j = i -1
+        WHILE (j>=1 and arr[j]>aux) DO
+            arr[j + 1] = arr[j]; 
+                j = j - 1; 
+            END_WHILE
+            arr[j + 1] = key;
+    END_FOR
+END
